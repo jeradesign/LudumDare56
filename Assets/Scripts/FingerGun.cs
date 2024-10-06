@@ -36,9 +36,15 @@ public class FingerGun : MonoBehaviour
         InvokeRepeating("FireBall", 1f, 1f);
     }
 
+// Finger joint order:
+//      Tip
+//      Distal
+//      Proximal
+//      Metacarpal
+//
     void FireBall() {
         var fingertip = _mHandSubsystem.rightHand.GetJoint(XRHandJointID.IndexTip);
-        var baseKnuckle = _mHandSubsystem.rightHand.GetJoint(XRHandJointID.IndexMetacarpal);
+        var baseKnuckle = _mHandSubsystem.rightHand.GetJoint(XRHandJointID.IndexIntermediate);
 
         if (fingertip.TryGetPose(out Pose fingertipPose) &&
                 baseKnuckle.TryGetPose(out Pose baseKnucklePose)) {
