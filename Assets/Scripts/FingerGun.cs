@@ -4,6 +4,7 @@ using System.Net.Http.Headers;
 using System.Numerics;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.XR.Hands;
 using Quaternion = UnityEngine.Quaternion;
 using Vector3 = UnityEngine.Vector3;
@@ -36,8 +37,14 @@ public class FingerGun : MonoBehaviour
     }
 
     void FireBall() {
-        var ball = Instantiate(prefabBall, new Vector3(0, 2, 0), Quaternion.identity);
-        var rb = ball.GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(0, 2, 10);
+        var fingertip = _mHandSubsystem.rightHand.GetJoint(XRHandJointID.IndexTip);
+        var baseKnuckle = _mHandSubsystem.rightHand.GetJoint(XRHandJointID.IndexMetacarpal);
+
+        if (fingertip.TryGetPose(out Pose fingertipPose) &&
+                baseKnuckle.TryGetPose(out Pose baseKnucklePose)) {
+            var ball = Instantiate(prefabBall, fingertipPose.position, Quaternion.identity);
+            var rb = ball.GetComponent<Rigidbody>();
+            rb.velocity = new Vector3(0, 2, 10);
+        }
     }
 }
