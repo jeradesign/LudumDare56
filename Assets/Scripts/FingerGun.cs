@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
+using System.Numerics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR.Hands;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 public class FingerGun : MonoBehaviour
 {
     private XRHandSubsystem _mHandSubsystem;
+    public GameObject prefabBall;
 
     // Start is called before the first frame update
     void Start()
@@ -24,26 +29,15 @@ public class FingerGun : MonoBehaviour
             }
         }
 
-        if (_mHandSubsystem != null)
-            _mHandSubsystem.updatedHands += OnUpdatedHands;
+        // if (_mHandSubsystem != null)
+        //     _mHandSubsystem.updatedHands += OnUpdatedHands;
 
+        InvokeRepeating("FireBall", 1f, 1f);
     }
 
-    // Update is called once per frame
-    void OnUpdatedHands(XRHandSubsystem subsystem,
-        XRHandSubsystem.UpdateSuccessFlags updateSuccessFlags,
-        XRHandSubsystem.UpdateType updateType)
-    {
-        switch(updateType)
-        {
-            case XRHandSubsystem.UpdateType.BeforeRender:
-                var trackingData = subsystem.rightHand.GetJoint(XRHandJointID.IndexTip);
-                if (trackingData.TryGetPose(out Pose pose))
-                {
-                    this.gameObject.transform.position = pose.position;
-                    this.gameObject.transform.rotation = pose.rotation;
-                }
-            break;
-        }
+    void FireBall() {
+        var ball = Instantiate(prefabBall, new Vector3(0, 2, 0), Quaternion.identity);
+        var rb = ball.GetComponent<Rigidbody>();
+        rb.velocity = new Vector3(0, 2, 10);
     }
 }
