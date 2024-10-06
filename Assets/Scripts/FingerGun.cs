@@ -43,8 +43,11 @@ public class FingerGun : MonoBehaviour
         if (fingertip.TryGetPose(out Pose fingertipPose) &&
                 baseKnuckle.TryGetPose(out Pose baseKnucklePose)) {
             var ball = Instantiate(prefabBall, fingertipPose.position, Quaternion.identity);
+            var directionVector = fingertipPose.position - baseKnucklePose.position;
+            directionVector.Normalize();
+            directionVector *= 10;
             var rb = ball.GetComponent<Rigidbody>();
-            rb.velocity = new Vector3(0, 2, 10);
+            rb.velocity = directionVector;
         }
     }
 }
