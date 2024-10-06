@@ -39,6 +39,7 @@ public class FingerGun : MonoBehaviour
 // Finger joint order:
 //      Tip
 //      Distal
+//      Intermediate?
 //      Proximal
 //      Metacarpal
 //
