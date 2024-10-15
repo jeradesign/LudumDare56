@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
 using System.Numerics;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
@@ -13,6 +14,10 @@ public class FingerGun : MonoBehaviour
 {
     private XRHandSubsystem _mHandSubsystem;
     public GameObject prefabBall;
+
+    public TextMeshPro tmp;
+
+    private int score = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -56,5 +61,10 @@ public class FingerGun : MonoBehaviour
             var rb = ball.GetComponent<Rigidbody>();
             rb.velocity = directionVector;
         }
+    }
+
+    public void AddScore(int scoreIncrement) {
+        score += scoreIncrement;
+        tmp.text = "" + score;
     }
 }
