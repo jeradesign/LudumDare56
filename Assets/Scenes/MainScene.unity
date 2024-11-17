@@ -180,7 +180,6 @@ GameObject:
   - component: {fileID: 217327790}
   - component: {fileID: 217327796}
   - component: {fileID: 217327795}
-  - component: {fileID: 217327794}
   m_Layer: 0
   m_Name: Cylinder (2)
   m_TagString: Untagged
@@ -203,29 +202,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 897871212}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!136 &217327794
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 217327789}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &217327795
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -701,7 +677,6 @@ GameObject:
   - component: {fileID: 874188540}
   - component: {fileID: 874188546}
   - component: {fileID: 874188545}
-  - component: {fileID: 874188544}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -724,29 +699,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 897871212}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!136 &874188544
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874188539}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &874188545
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1279,7 +1231,6 @@ GameObject:
   - component: {fileID: 2012620705}
   - component: {fileID: 2012620711}
   - component: {fileID: 2012620710}
-  - component: {fileID: 2012620709}
   m_Layer: 0
   m_Name: Cylinder (3)
   m_TagString: Untagged
@@ -1302,29 +1253,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 897871212}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!136 &2012620709
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012620704}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &2012620710
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1386,7 +1314,6 @@ GameObject:
   - component: {fileID: 2121405534}
   - component: {fileID: 2121405540}
   - component: {fileID: 2121405539}
-  - component: {fileID: 2121405538}
   m_Layer: 0
   m_Name: Cylinder (4)
   m_TagString: Untagged
@@ -1409,29 +1336,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 897871212}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!136 &2121405538
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121405533}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &2121405539
 MeshRenderer:
   m_ObjectHideFlags: 0
